@@ -4,13 +4,11 @@
     <item
         android:id="@+id/navigation_home"
         android:orderInCategory="0"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="외화 판매하기"/>
+        android:title="@string/ftow"/>
 
     <item
         android:id="@+id/navigation_category"
         android:orderInCategory="1"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="외화 구매하기"/>
+        android:title="@string/wtof"/>
 
 </menu>

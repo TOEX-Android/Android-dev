@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/mainTitlebar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#F8F8F8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@null"
+        android:src="@drawable/ic_setting_button"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTitlebar"
+        app:layout_constraintLeft_toLeftOf="@+id/mainTitlebar"
+        app:layout_constraintTop_toTopOf="@+id/mainTitlebar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOEX"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTitlebar"
+        app:layout_constraintLeft_toLeftOf="@+id/mainTitlebar"
+        app:layout_constraintRight_toRightOf="@+id/mainTitlebar"
+        app:layout_constraintTop_toTopOf="@+id/mainTitlebar" />
+
+    <ImageButton
+        android:id="@+id/writeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:maxHeight="32dp"
+        android:maxWidth="32dp"
+        android:src="@drawable/ic_edit_btn"
+        android:scaleType="fitCenter"
+        app:layout_constraintRight_toRightOf="@+id/mainTitlebar"
+        app:layout_constraintTop_toTopOf="@+id/mainTitlebar"
+        app:layout_constraintBottom_toBottomOf="@+id/mainTitlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitlebar"
+        app:layout_constraintBottom_toTopOf="@+id/goChatRoomBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/midConsLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/userProfileImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:layout_constraintLeft_toLeftOf="@+id/midConsLayout1"
+                app:layout_constraintTop_toTopOf="@+id/midConsLayout1"
+                app:layout_constraintBottom_toBottomOf="@+id/midConsLayout1"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/userID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textSize = "19dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/userProfileImageView"
+                app:layout_constraintTop_toTopOf="@+id/midConsLayout1"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/userPlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1600 Pennsylvania Avenue, NW Washington, D.C. 20500, U.S."
+                android:textSize="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/userID"
+                app:layout_constraintLeft_toRightOf="@+id/userProfileImageView"
+                app:layout_constraintRight_toRightOf="@+id/midConsLayout1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/midConsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/sellImage"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sellimage"
+                app:layout_constraintTop_toTopOf="@+id/midConsLayout2"
+                app:layout_constraintLeft_toLeftOf="@+id/midConsLayout2"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:id="@+id/buyImage"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:src="@drawable/buyimage"
+                app:layout_constraintTop_toTopOf="@+id/midConsLayout2"
+                app:layout_constraintRight_toRightOf="@+id/midConsLayout2"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/sellPriceTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "1,200"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/sellImage"
+                app:layout_constraintRight_toLeftOf="@+id/buyPriceTxv"
+                app:layout_constraintLeft_toLeftOf="@+id/midConsLayout2" />
+
+            <TextView
+                android:id="@+id/buyPriceTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "1,200"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#65CF7C"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/buyImage"
+                app:layout_constraintLeft_toRightOf="@+id/sellPriceTxv"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintRight_toRightOf="@+id/midConsLayout2"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/midConsLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1">
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                class="com.google.android.gms.maps.MapFragment" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/goChatRoomBtn"
+        android:text="Chat"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#E6448D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

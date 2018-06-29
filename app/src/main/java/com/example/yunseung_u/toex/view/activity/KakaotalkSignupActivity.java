@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.yunseung_u.toex.Application.GlobalApplication;
+import com.example.yunseung_u.toex.model.UserInfo;
 import com.kakao.auth.ErrorCode;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
@@ -57,6 +59,11 @@ public class KakaotalkSignupActivity extends Activity{
             public void onSuccess(UserProfile result) {
                 Log.e("UserProfile", result.toString());
                 Log.e("UserProfile", result.getId() + "");
+                UserInfo userInfo = new UserInfo();
+                userInfo.setKakao_id(result.getNickname());
+                userInfo.setId(result.getUUID());
+                userInfo.setKakao_profile(result.getThumbnailImagePath());
+                GlobalApplication.setCurrentUser(userInfo);
                 redirectMainActivity();
             }
         });
