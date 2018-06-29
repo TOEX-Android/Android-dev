@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/back_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="9dp"
+        android:src="@drawable/ic_close_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/value_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="금액설정"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+
+        android:id="@+id/MotherView"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/value_setting"
+        >
+    </View>
+
+    <TextView
+        android:text="1"
+        android:id="@+id/minMarkerNum"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintTop_toTopOf="@+id/MotherView"
+        app:layout_constraintLeft_toLeftOf="@+id/MotherView"
+        app:layout_constraintBottom_toBottomOf="@+id/MotherView"/>
+
+
+    <TextView
+        android:id="@+id/devide"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/minMarkerNum"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@+id/MotherView"
+        app:layout_constraintBottom_toBottomOf="@+id/MotherView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="30,000"
+        android:id="@+id/maxMarkerNum"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/MotherView"
+        app:layout_constraintTop_toTopOf="@id/MotherView"
+        app:layout_constraintBottom_toBottomOf="@id/MotherView"/>
+
+    <com.appyvet.materialrangebar.RangeBar
+
+        android:id="@+id/rangeBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrb_connectingLineColor="#65CF7C"
+        app:mrb_pinColor="#65CF7C"
+        app:mrb_pinTextColor="#65CF7C"
+        app:mrb_selectorColor="#65CF7C"
+        app:mrb_barWeight="4dp"
+        app:mrb_pinMaxFont="5sp"
+        app:mrb_tickEnd="10"
+        app:mrb_tickInterval="1"
+        app:mrb_tickStart="5" />
+
+    <TextView
+        android:id="@+id/minNum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeBar"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="36dp"
+        android:text="1"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/maxNum"
+        android:text="100,000"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeBar"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</android.support.constraint.ConstraintLayout>

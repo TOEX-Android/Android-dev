@@ -11,5 +11,14 @@
     </style>
 
 
+    <!-- BottomNavigation theme. -->
+    <style name="BottomNavigation">
+        <item name="android:background">@color/white</item>
+        <item name="itemBackground">@drawable/navigation_bar_item_bg</item>
+        <item name="itemIconTint">@drawable/navigation_bar_item_selector</item>
+        <item name="itemTextColor">@drawable/navigation_bar_item_selector</item>
+    </style>
+
+
 
 </resources>
