@@ -7,6 +7,8 @@ import android.content.pm.Signature;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
@@ -14,9 +16,12 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.yunseung_u.toex.R;
+import com.example.yunseung_u.toex.model.DealItem;
+import com.example.yunseung_u.toex.view.adapter.DealitemAdapter;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,6 +31,8 @@ import static com.kakao.util.helper.Utility.getPackageInfo;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    RecyclerView recyclerView;
 
     CustomDialog dialog;
 
@@ -65,6 +72,38 @@ public class MainActivity extends AppCompatActivity {
         params.height = 800;
 
         dialog.getWindow().setAttributes(params);
+
+
+
+        ArrayList items = new ArrayList<>();
+
+        items.add(new DealItem("asw","ayqwer","34","124",400,
+                "JYN",1020,"WON","asdfsdf","100"));
+
+        items.add(new DealItem("asw","ayqwer","34","124",400,
+                "JYN",1020,"WON","asdfsdf","100"));
+
+        items.add(new DealItem("asw","ayqwer","34","124",400,
+                "JYN",1020,"WON","asdfsdf","100"));
+
+        items.add(new DealItem("asw","ayqwer","34","124",400,
+                "JYN",1020,"WON","asdfsdf","100"));
+
+        items.add(new DealItem("asw","ayqwer","34","124",400,
+                "JYN",1020,"WON","asdfsdf","100"));
+
+
+
+
+
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        DealitemAdapter mAdapter = new DealitemAdapter(this,items);
+        recyclerView.setAdapter(mAdapter);
+
 
     }
 

@@ -14,6 +14,7 @@ import com.example.yunseung_u.toex.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.apptik.widget.MultiSlider;
 
 public class CustomDialog extends Dialog {
 
@@ -22,7 +23,8 @@ public class CustomDialog extends Dialog {
     @BindView(R.id.maxMarkerNum) TextView maxMarkerNumText;
     @BindView(R.id.minNum) TextView minNumText;
     @BindView(R.id.maxNum) TextView maxNumText;
-    @BindView(R.id.rangeBar) RangeBar rangebar;
+    @BindView(R.id.rangeBar)
+    MultiSlider rangebar;
 
 
     public interface MyDialogListener {
@@ -47,21 +49,18 @@ public class CustomDialog extends Dialog {
 
         ButterKnife.bind(this);
 
-
-        rangebar.setTickStart(1);
-        rangebar.setTickInterval(1);
-        rangebar.setTickEnd(100);
-        rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
+        rangebar.setOnThumbValueChangeListener(new MultiSlider.OnThumbValueChangeListener() {
             @Override
-            public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
-                                              int rightPinIndex, String leftPinValue, String rightPinValue) {
-
-                minMarkerNumText.setText("" + leftPinIndex);
-                maxMarkerNumText.setText("" + rightPinIndex);
-
+            public void onValueChanged(MultiSlider multiSlider,
+                                       MultiSlider.Thumb thumb,
+                                       int thumbIndex,
+                                       int value)
+            {
+               minMarkerNumText.setText(String.valueOf(multiSlider.getThumb(0).getValue()));
+               maxMarkerNumText.setText(String.valueOf(multiSlider.getThumb(1).getValue()));
             }
-
         });
+
     }
 
     @OnClick(R.id.back_btn)

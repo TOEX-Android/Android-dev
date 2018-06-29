@@ -3,6 +3,18 @@ package com.example.yunseung_u.toex.model;
 import com.google.gson.annotations.SerializedName;
 
 public class DealItem {
+    public DealItem(String id, String place, String latitude, String longitude, int sellprice, String sellunit, int buyprice, String buyunit, String userprofileURL, String distance) {
+        this.id = id;
+        this.place = place;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.sellprice = sellprice;
+        this.sellunit = sellunit;
+        this.buyprice = buyprice;
+        this.buyunit = buyunit;
+        this.userprofileURL = userprofileURL;
+        this.distance = distance;
+    }
 
     @SerializedName("id")
     private String id;
@@ -20,6 +32,20 @@ public class DealItem {
     private int buyprice;
     @SerializedName("buyunit")
     private String buyunit;
+
+    @SerializedName("userprofileURL")
+    private String userprofileURL;
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    @SerializedName("distance")
+    private String distance;
 
     public String getId(){return id;}
     public String getPlace(){return place;}
@@ -53,5 +79,14 @@ public class DealItem {
     }
     public void setBuyunit(String buyunit){
         this.buyunit = buyunit;
+    }
+
+
+    public String getUserprofileURL() {
+        return userprofileURL;
+    }
+
+    public void setUserprofileURL(String userprofileURL) {
+        this.userprofileURL = userprofileURL;
     }
 }

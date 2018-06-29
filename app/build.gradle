@@ -37,6 +37,7 @@ dependencies {
     //UI Library awesome UI
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'com.appyvet:materialrangebar:1.4.3'
+    implementation 'io.apptik.widget:multislider-holo:1.3'
 
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.retrofit2:retrofit:2.1.0' // Retrofit

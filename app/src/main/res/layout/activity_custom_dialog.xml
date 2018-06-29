@@ -35,10 +35,10 @@
         android:id="@+id/MotherView"
         android:layout_width="130dp"
         android:layout_height="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="64dp"
         android:layout_marginStart="36dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/value_setting"
+        app:layout_constraintTop_toTopOf="parent"
         >
     </View>
 
@@ -75,29 +75,25 @@
         app:layout_constraintTop_toTopOf="@id/MotherView"
         app:layout_constraintBottom_toBottomOf="@id/MotherView"/>
 
-    <com.appyvet.materialrangebar.RangeBar
+    <io.apptik.widget.MultiSlider
 
         android:id="@+id/rangeBar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MotherView"
 
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        app:thumbNumber="2"
+        app:stepsThumbsApart="5"
+        app:drawThumbsApart="true"
 
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:thumbColor="@color/green"
+        app:rangeColor="@color/green"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mrb_connectingLineColor="#65CF7C"
-        app:mrb_pinColor="#65CF7C"
-        app:mrb_pinTextColor="#65CF7C"
-        app:mrb_selectorColor="#65CF7C"
-        app:mrb_barWeight="4dp"
-        app:mrb_pinMaxFont="5sp"
-        app:mrb_tickEnd="10"
-        app:mrb_tickInterval="1"
-        app:mrb_tickStart="5" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/minNum"
