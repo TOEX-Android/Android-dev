@@ -23,11 +23,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.activity.ShowListItemActivity">
+
+        </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="@string/kakao_app_key"
-        />
+            android:value="@string/kakao_app_key" />
+
+        <!--Google Map Api-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC1xxIElhuXQswH3u6Hom5wDhNTTgUIEKs"/>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
