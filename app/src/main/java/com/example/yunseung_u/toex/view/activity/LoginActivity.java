@@ -17,6 +17,9 @@ import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class LoginActivity  extends Activity {
 
     private SessionCallback callback;      //콜백 선언
@@ -66,5 +69,6 @@ public class LoginActivity  extends Activity {
         startActivity(intent);
         finish();
     }
+
 
 }
