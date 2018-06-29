@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TOEX</string>
+
+    <string name="USD">&#36;</string>
+    <string name="JPY">&#165;</string>
+    <string name="CNY">&#165;</string>
+    <string name="KRW">&#65510;</string>
+
 </resources>
