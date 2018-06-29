@@ -7,15 +7,15 @@ import java.util.HashMap;
 
 public class TransactionItem implements Serializable{
 
-    private Image currency_icon;
+    private Image userProfileURL;
     private String from;
     private String to;
     private String value;
     private HashMap<String,String> location;
     private String currency;
 
-    public TransactionItem(Image currency_icon, String from, String to, String value, HashMap<String, String> location, String currency) {
-        this.currency_icon = currency_icon;
+    public TransactionItem(Image userProfileURL, String from, String to, String value, HashMap<String, String> location, String currency) {
+        this.userProfileURL = userProfileURL;
         this.from = from;
         this.to = to;
         this.value = value;
@@ -23,15 +23,15 @@ public class TransactionItem implements Serializable{
         this.currency = currency;
     }
 
-    public Image getCurrency_icon() {
-        return currency_icon;
+    public Image getUserProfileURL(){
+        return userProfileURL;
     }
 
-    public void setCurrency_icon(Image currency_icon) {
-        this.currency_icon = currency_icon;
-    }
+    public void setUserprofileURL(Image userprofile_icon) {
+        this.userProfileURL = userprofile_icon;
 
-    public String getFrom() {
+    }
+        public String getFrom() {
         return from;
     }
 
