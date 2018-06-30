@@ -39,6 +39,8 @@ public class ShowListItemActivity extends AppCompatActivity implements OnMapRead
 
     Button chatButton;
 
+
+
     //User 이미지 사진 다운로드 및 Chat 버튼 눌렀을 때 이벤트 정의 필요!!
 
     @Override
@@ -46,8 +48,10 @@ public class ShowListItemActivity extends AppCompatActivity implements OnMapRead
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_listitem);
 
+
+
         Intent intent = getIntent();
-        item = (DealItem)intent.getSerializableExtra("item");
+        //item = (DealItem)intent.getSerializableExtra("item");
 
         //Profile Image -> Circle
         userProfileImageView = (ImageView)findViewById(R.id.userProfileImageView);

@@ -73,7 +73,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         TextView profile_name;
         @BindView(R.id.currency)
         TextView item_currency;
-        @BindView(R.id.distance)
+        @BindView(R.id.distance_value)
         TextView item_distance;
 
         public ItemViewHolder(View itemView) {

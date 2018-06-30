@@ -15,7 +15,10 @@
 
         <activity android:name=".view.activity.MainActivity"></activity>
         <activity android:name=".view.activity.KakaotalkSignupActivity"></activity>
-        <activity android:name=".view.activity.LoginActivity">
+
+
+        <activity android:name=".view.activity.LoginActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +40,5 @@
             android:value="AIzaSyC1xxIElhuXQswH3u6Hom5wDhNTTgUIEKs"/>
 
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

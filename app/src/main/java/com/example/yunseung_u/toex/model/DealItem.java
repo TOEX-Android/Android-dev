@@ -2,7 +2,10 @@ package com.example.yunseung_u.toex.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DealItem {
+import java.io.Serializable;
+
+
+public class DealItem implements Serializable {
     public DealItem(String id, String place, String latitude, String longitude, int sellprice, String sellunit, int buyprice, String buyunit, String userprofileURL, String distance) {
         this.id = id;
         this.place = place;
@@ -15,6 +18,7 @@ public class DealItem {
         this.userprofileURL = userprofileURL;
         this.distance = distance;
     }
+
 
     @SerializedName("id")
     private String id;

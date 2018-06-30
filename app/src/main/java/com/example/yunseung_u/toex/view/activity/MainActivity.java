@@ -78,19 +78,19 @@ public class MainActivity extends AppCompatActivity {
         ArrayList items = new ArrayList<>();
 
         items.add(new DealItem("asw","ayqwer","34","124",400,
-                "JYN",1020,"WON","asdfsdf","100"));
+                "JPY",1020,"WON","asdfsdf","100"));
 
         items.add(new DealItem("asw","ayqwer","34","124",400,
-                "JYN",1020,"WON","asdfsdf","100"));
+                "JPY",1020,"WON","asdfsdf","100"));
 
         items.add(new DealItem("asw","ayqwer","34","124",400,
-                "JYN",1020,"WON","asdfsdf","100"));
+                "JPY",1020,"WON","asdfsdf","100"));
 
         items.add(new DealItem("asw","ayqwer","34","124",400,
-                "JYN",1020,"WON","asdfsdf","100"));
+                "JPY",1020,"WON","asdfsdf","100"));
 
         items.add(new DealItem("asw","ayqwer","34","124",400,
-                "JYN",1020,"WON","asdfsdf","100"));
+                "JPY",1020,"WON","asdfsdf","100"));
 
 
 
